@@ -92,7 +92,7 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     @Override
     public boolean isEnabled(){
         // 계정이 사용 가능한지 확인하는 로직
-        return true; // true -> 사용가능
+        return true; // true -> 사용가옴
     }
 
 
