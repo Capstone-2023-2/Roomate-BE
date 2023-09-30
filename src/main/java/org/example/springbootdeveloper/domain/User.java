@@ -38,7 +38,7 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     private char gender;
 
     @Column(name = "status")
-    private boolean status;
+    private Boolean status;
 
     @Builder
     public User(String userId, String password, String email, String nickname, char gender, boolean status, String auth){
