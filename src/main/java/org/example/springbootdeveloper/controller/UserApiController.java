@@ -29,10 +29,13 @@ public class UserApiController {
         return ResponseEntity.ok("User signed up successfully");
     }
 
+    /*
     @GetMapping("/logout")
     public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
         new SecurityContextLogoutHandler().logout(request, response,
                 SecurityContextHolder.getContext().getAuthentication());
         return ResponseEntity.ok("Logged out successfully");
     }
+
+     */
 }

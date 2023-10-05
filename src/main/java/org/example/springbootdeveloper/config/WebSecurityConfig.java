@@ -4,12 +4,16 @@ import lombok.RequiredArgsConstructor;
 import org.example.springbootdeveloper.service.UserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
 import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
 
@@ -35,12 +39,23 @@ public class WebSecurityConfig {
                 .requestMatchers("/login", "/signup", "/user").permitAll()
                 .anyRequest().authenticated()
                 .and()
+                .exceptionHandling()
+                // 인증이 안 된 상태일 때, 리다이렉트하지 않고, 401 상태로 응답
+                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
+                .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/") // 메인 페이지로 이동
+                // 로그인 성공시, 리다이렉트하지 않고, 204 상태로 응답
+                .successHandler((req, res, auth) -> res.setStatus(HttpStatus.NO_CONTENT.value()))
+                // 로그인 실패시, 리다이렉트하지 않고, 401 상태로 응답
+                .failureHandler(new SimpleUrlAuthenticationFailureHandler())
+                .permitAll()
+
                 .and()
                 .logout()
-                .logoutSuccessUrl("/login")
+                //.logoutSuccessUrl("/login")
+                // 로그아웃 성공시, 리다이렉트하지 않고, 204 상태로 응답
+                .logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.NO_CONTENT))
                 .invalidateHttpSession(true)
                 .and()
                 .csrf().disable()
