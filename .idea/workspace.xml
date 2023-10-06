@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserViewController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,8 @@
       <workItem from="1695977439033" duration="763000" />
       <workItem from="1695980723087" duration="17098000" />
       <workItem from="1696092071045" duration="7149000" />
-      <workItem from="1696480268328" duration="4524000" />
+      <workItem from="1696480268328" duration="5775000" />
+      <workItem from="1696591502054" duration="3861000" />
     </task>
     <servers />
   </component>
@@ -124,7 +122,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feat/sign_up" />
+                        <option value="origin/feat/sign_up" />
                       </list>
                     </value>
                   </entry>
