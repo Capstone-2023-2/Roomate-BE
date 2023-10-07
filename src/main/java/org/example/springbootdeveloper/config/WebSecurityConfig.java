@@ -39,6 +39,8 @@ public class WebSecurityConfig {
         return http
                 .authorizeRequests()
                 .requestMatchers("/login", "/signup", "/user", "/mailConfirm").permitAll()
+                .requestMatchers("/auth/**").permitAll()
+
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling()

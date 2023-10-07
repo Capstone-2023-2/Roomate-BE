@@ -9,10 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -27,6 +24,22 @@ public class UserApiController {
     public ResponseEntity<String> signup(@RequestBody AddUserRequest request) {
         userService.save(request); //회원 가입 메서드 호출
         return ResponseEntity.ok("User signed up successfully");
+    }
+
+    /* 아이디, 닉네임, 이메일 중복 체크 */
+    @GetMapping("/auth/id/{userId}/exists")
+    public ResponseEntity<Boolean> checkUserIdDuplicate(@PathVariable String userId){
+        return ResponseEntity.ok(userService.checkUsernameDuplication(userId));
+    }
+
+    @GetMapping("/auth/nickname/{nickname}/exists")
+    public ResponseEntity<Boolean> checkNicknameDuplicate(@PathVariable String nickname){
+        return ResponseEntity.ok(userService.checkUsernameDuplication(nickname));
+    }
+
+    @GetMapping("/auth/email/{email}/exists")
+    public ResponseEntity<Boolean> checkEmailDuplicate(@PathVariable String email){
+        return ResponseEntity.ok(userService.checkUsernameDuplication(email));
     }
 
 }
