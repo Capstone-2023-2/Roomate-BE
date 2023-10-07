@@ -50,7 +50,7 @@ public class EmailService {
         createCode(); //인증 코드 생성
         String setFrom = "rnqhstlr2297@naver.com"; //email-config에 설정한 자신의 이메일 주소(보내는 사람)
         String toEmail = email; //받는 사람
-        String title = "CODEBOX 회원가입 인증 번호"; //제목
+        String title = "Aniroomy 회원가입 인증 번호"; //제목
 
         MimeMessage message = emailSender.createMimeMessage();
         message.addRecipients(MimeMessage.RecipientType.TO, email); //보낼 이메일 설정
