@@ -6,6 +6,7 @@ import org.example.springbootdeveloper.dto.AddUserRequest;
 import org.example.springbootdeveloper.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -22,6 +23,29 @@ public class UserService {
                 .status(dto.getStatus())
                 .password(bCryptPasswordEncoder.encode(dto.getPassword()))
                 .build()).getId();
+    }
+
+    /* 아이디, 닉네임, 이메일 중복 여부 확인 */
+    @Transactional(readOnly = true)
+    //@Override
+    public boolean checkUsernameDuplication(String userId) {
+        boolean userIdDuplicate = userRepository.existsByUserId(userId);
+        return userIdDuplicate;
+    }
+
+    @Transactional(readOnly = true)
+    //@Override
+    public boolean checkNicknameDuplication(String nickname) {
+        boolean nicknameDuplicate = userRepository.existsByNickname(nickname);
+        return nicknameDuplicate;
+
+    }
+
+    @Transactional(readOnly = true)
+    //@Override
+    public boolean checkEmailDuplication(String email) {
+        boolean emailDuplicate = userRepository.existsByEmail(email);
+        return emailDuplicate;
     }
 
 }
