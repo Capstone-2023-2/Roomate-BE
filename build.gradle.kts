@@ -31,6 +31,7 @@ dependencies {
     //thymeleaf사용을 위한 의존성 추가
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
 }
 

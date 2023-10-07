@@ -12,7 +12,9 @@ spring:
     console:
       enabled: true
 
+
   mail:
+    # Google smtp server 사용
     host: smtp.gmail.com
     port: 587
     username: baesoomin6
@@ -20,8 +22,7 @@ spring:
     properties:
       mail:
         smtp:
-          auth: true
-          timeout: 5000
           starttls:
-            enable: ture
+            enable: true
+          auth: true
 
