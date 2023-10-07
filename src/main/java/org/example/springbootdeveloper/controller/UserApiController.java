@@ -29,17 +29,17 @@ public class UserApiController {
     /* 아이디, 닉네임, 이메일 중복 체크 */
     @GetMapping("/auth/id/{userId}/exists")
     public ResponseEntity<Boolean> checkUserIdDuplicate(@PathVariable String userId){
-        return ResponseEntity.ok(userService.checkUsernameDuplication(userId));
+        return ResponseEntity.ok(userService.checkUserIdDuplication(userId));
     }
 
     @GetMapping("/auth/nickname/{nickname}/exists")
     public ResponseEntity<Boolean> checkNicknameDuplicate(@PathVariable String nickname){
-        return ResponseEntity.ok(userService.checkUsernameDuplication(nickname));
+        return ResponseEntity.ok(userService.checkNicknameDuplication(nickname));
     }
 
     @GetMapping("/auth/email/{email}/exists")
     public ResponseEntity<Boolean> checkEmailDuplicate(@PathVariable String email){
-        return ResponseEntity.ok(userService.checkUsernameDuplication(email));
+        return ResponseEntity.ok(userService.checkEmailDuplication(email));
     }
 
 }
