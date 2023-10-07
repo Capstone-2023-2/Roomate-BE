@@ -28,7 +28,7 @@ public class UserService {
     /* 아이디, 닉네임, 이메일 중복 여부 확인 */
     @Transactional(readOnly = true)
     //@Override
-    public boolean checkUsernameDuplication(String userId) {
+    public boolean checkUserIdDuplication(String userId) {
         boolean userIdDuplicate = userRepository.existsByUserId(userId);
         return userIdDuplicate;
     }
