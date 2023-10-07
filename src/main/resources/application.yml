@@ -11,3 +11,18 @@ spring:
   h2:
     console:
       enabled: true
+
+
+  mail:
+    # Google smtp server 사용
+    host: smtp.gmail.com
+    port: 587
+    username: baesoomin6
+    password: pgbchucoclqozqxx
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+
