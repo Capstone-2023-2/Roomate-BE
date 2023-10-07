@@ -26,6 +26,12 @@ dependencies {
     implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
     // 스프링 시큐리티를 테스트하기 위한 의존성 추가
     testImplementation("org.springframework.security:spring-security-test")
+    // 이메일 인증을 위한 의존성 추가
+    implementation ("org.springframework.boot:spring-boot-starter-mail")
+    //thymeleaf사용을 위한 의존성 추가
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+
 }
 
 tasks.test {
