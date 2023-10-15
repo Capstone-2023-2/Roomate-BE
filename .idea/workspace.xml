@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/dto/EmailAuthRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserStyleApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/domain/UserStyle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dto/AddUserStyleRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/repository/UserStyleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/service/StyleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/controller/EmailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/dto/EmailPostDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/dto/EmailResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/email/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/baesumin/Desktop/capston_backend/mate_backend/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "http.proxy",
-    "spring.configuration.checksum": "28a93b9d03450515c6262d0b8f2e5c3a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/baesumin/Desktop/capston_backend/mate_backend/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;28a93b9d03450515c6262d0b8f2e5c3a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.springbootdeveloper.email.dto" />
