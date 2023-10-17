@@ -19,7 +19,7 @@ public class UserAnimal {
     @Column(name = "userId")
     private String userId;
 
-    private boolean sensitive; //예민하면 1, 아니면 0
+    private boolean sensitive; //예민하면 true, 아니면 false
     private String animal;
 
     @Builder
