@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name= "userstyles")
+@Table(name= "user_styles")
 public class UserStyle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

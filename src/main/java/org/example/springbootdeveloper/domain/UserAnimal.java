@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name= "userAnimals")
+@Table(name= "user_animals")
 public class UserAnimal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,13 +20,13 @@ public class UserAnimal {
     private String userId;
 
     private boolean sensitive; //예민하면 1, 아니면 0
-    private String userAnimal;
+    private String animal;
 
     @Builder
-    public UserAnimal(String userId, boolean sensitive, String userAnimal)
+    public UserAnimal(String userId, boolean sensitive, String animal)
     {
         this.userId = userId;
         this.sensitive = sensitive;
-        this.userAnimal = userAnimal;
+        this.animal = animal;
     }
 }
