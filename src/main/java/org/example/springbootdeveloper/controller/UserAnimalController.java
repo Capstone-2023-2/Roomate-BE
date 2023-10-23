@@ -22,7 +22,7 @@ public class UserAnimalController {
     @PostMapping("/animal")
     public ResponseEntity<String> addUserStyle(Principal principal) {
         UserAnimal saveduserAnimal = animalService.save(principal.getName());
-        return ResponseEntity.ok("User style successfully");
+        return ResponseEntity.ok("User animal successfully");
     }
 
 

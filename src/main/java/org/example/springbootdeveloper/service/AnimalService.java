@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 public class AnimalService {
     private final UserAnimalRepository userAnimalRepository;
     private final UserStyleRepository userStyleRepository;
-    private static final String[] animals = {"dog", "penguin", "rabbit", "polar bear", "quokka", "wolf", "cat", "arctic fox"};
 
 
     public UserStyle loadUserByUsername(String userId){
@@ -27,8 +26,9 @@ public class AnimalService {
 
         UserStyle userStyle = loadUserByUsername(userId);
         boolean userSensitive = true;
-        String animal = animals[0];
-        boolean day_night = true; //아침형이면 true, 저녁형이면 false
+        String selectedAnimal = "";
+        String[] animals = {"dog", "penguin", "rabbit", "polar bear", "quokka", "wolf", "cat", "arctic fox"};
+
         boolean active = true; //외향성이면 true, 내향성이면 false
         boolean hot_cold = true; //여름 선호형(추위 기피형)이면 true, 겨울 선호형(더위 기피형)이면 false
 
@@ -58,32 +58,48 @@ public class AnimalService {
                 userStyle.getColdOrHot(),
                 userStyle.getSummerOrWinter()
         };
+        double day_average = (userStyles[0] + userStyles[1]) / 2.0;
+        boolean day_night = (day_average <= 3);
 
+        if(userStyles[18]== 1){active = true;}
+        else{active = false;}
 
-        if (userStyles[0] == 1)
-        {
-            animal = "rabbit";
-
-
+        if (userStyles[21] == 1) {
+            hot_cold = true; //여름
+        } else if (userStyles[21] == 3) {
+            hot_cold = false; //겨울
+        } else if (userStyles[21] == 2 || userStyles[21] == 0) {
+            if (userStyles[22] == 1) {
+                hot_cold = true; //여름
+            } else if (userStyles[22] == 3) {
+                hot_cold = false; //겨울
+            }
         }
 
 
-
-
-
-
-
-
-
-
-
-
+        if (day_night && active && hot_cold) {
+            selectedAnimal = animals[0];
+        } else if (day_night && active && !hot_cold) {
+            selectedAnimal = animals[1];
+        } else if (day_night && !active && hot_cold) {
+            selectedAnimal = animals[2];
+        } else if (day_night && !active && !hot_cold) {
+            selectedAnimal = animals[3];
+        } else if (!day_night && active && hot_cold) {
+            selectedAnimal = animals[4];
+        } else if (!day_night && active && !hot_cold) {
+            selectedAnimal = animals[5];
+        } else if (!day_night && !active && hot_cold) {
+            selectedAnimal = animals[6];
+        } else if (!day_night && !active && !hot_cold) {
+            selectedAnimal = animals[7];
+        }
 
 
         UserAnimal userAnimal = UserAnimal.builder()
                 .userId(userId)
                 .sensitive(userSensitive)
-                .animal(animal)
+                .animal(selectedAnimal)
                 .build();
         return userAnimalRepository.save(userAnimal);
     }
