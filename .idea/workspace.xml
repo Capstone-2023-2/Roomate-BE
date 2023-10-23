@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserStyleApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/domain/UserStyle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dto/AddUserStyleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/repository/UserStyleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/service/StyleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserAnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/controller/UserAnimalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/service/AnimalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2W3zzoZcmhkq522SoQCeJFFoH6r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,6 +47,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -101,6 +101,9 @@
       <workItem from="1695980723087" duration="17098000" />
       <workItem from="1696092071045" duration="7149000" />
       <workItem from="1696480268328" duration="4524000" />
+      <workItem from="1697426595035" duration="2593000" />
+      <workItem from="1697542342444" duration="5525000" />
+      <workItem from="1697598759042" duration="2421000" />
     </task>
     <servers />
   </component>
@@ -133,7 +136,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feat/sign_up" />
+                        <option value="div/detailUserStyle" />
                       </list>
                     </value>
                   </entry>
