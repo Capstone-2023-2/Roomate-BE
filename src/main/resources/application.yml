@@ -26,3 +26,5 @@ spring:
             enable: true
           auth: true
 
+
+
