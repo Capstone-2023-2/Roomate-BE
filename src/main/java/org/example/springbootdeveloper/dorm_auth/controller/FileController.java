@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,7 @@ public class FileController {
      */
     @PostMapping("/auth/image")
     public FileEntity uploadImage(HttpServletRequest request,
-                                  @RequestParam(value="file", required = false) MultipartFile[] files) {
+                                  @RequestParam(value="file", required = false) MultipartFile[] files, Principal principal) {
 
         String FileNames = "";
 
@@ -43,6 +44,7 @@ public class FileController {
 
         final FileEntity file = FileEntity.builder()
                 .filename(safeFile)
+                .user_id(principal.getName())
                 .build();
 
         return fileRepository.save(file);
