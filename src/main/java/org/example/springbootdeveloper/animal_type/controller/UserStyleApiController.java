@@ -1,10 +1,9 @@
-package org.example.springbootdeveloper.controller;
+package org.example.springbootdeveloper.animal_type.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springbootdeveloper.domain.UserStyle;
-import org.example.springbootdeveloper.dto.AddUserStyleRequest;
-import org.example.springbootdeveloper.service.StyleService;
-import org.example.springbootdeveloper.service.UserService;
+import org.example.springbootdeveloper.animal_type.domain.UserStyle;
+import org.example.springbootdeveloper.animal_type.dto.AddUserStyleRequest;
+import org.example.springbootdeveloper.animal_type.service.StyleService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

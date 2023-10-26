@@ -1,6 +1,6 @@
-package org.example.springbootdeveloper.repository;
+package org.example.springbootdeveloper.user.respository;
 
-import org.example.springbootdeveloper.domain.User;
+import org.example.springbootdeveloper.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,10 +1,7 @@
-package org.example.springbootdeveloper.controller;
+package org.example.springbootdeveloper.animal_type.controller;
 
-import org.example.springbootdeveloper.domain.UserAnimal;
-import org.example.springbootdeveloper.domain.UserStyle;
-import org.example.springbootdeveloper.dto.AddUserRequest;
-import org.example.springbootdeveloper.dto.AddUserStyleRequest;
-import org.example.springbootdeveloper.service.AnimalService;
+import org.example.springbootdeveloper.animal_type.domain.UserAnimal;
+import org.example.springbootdeveloper.animal_type.service.AnimalService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

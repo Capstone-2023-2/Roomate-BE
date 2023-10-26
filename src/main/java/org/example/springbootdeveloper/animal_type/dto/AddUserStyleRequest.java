@@ -1,9 +1,9 @@
-package org.example.springbootdeveloper.dto;
+package org.example.springbootdeveloper.animal_type.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.springbootdeveloper.domain.UserStyle;
+import org.example.springbootdeveloper.animal_type.domain.UserStyle;
 
 @NoArgsConstructor
 @AllArgsConstructor

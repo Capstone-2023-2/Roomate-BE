@@ -3,7 +3,7 @@
 package org.example.springbootdeveloper.config;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springbootdeveloper.service.UserDetailService;
+import org.example.springbootdeveloper.user.service.UserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
