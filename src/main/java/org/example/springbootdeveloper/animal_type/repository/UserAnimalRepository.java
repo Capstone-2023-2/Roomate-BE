@@ -1,7 +1,6 @@
-package org.example.springbootdeveloper.repository;
+package org.example.springbootdeveloper.animal_type.repository;
 
-import org.example.springbootdeveloper.domain.User;
-import org.example.springbootdeveloper.domain.UserAnimal;
+import org.example.springbootdeveloper.animal_type.domain.UserAnimal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

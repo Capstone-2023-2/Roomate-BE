@@ -1,14 +1,8 @@
-package org.example.springbootdeveloper.controller;
+package org.example.springbootdeveloper.user.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
-import org.example.springbootdeveloper.dto.AddUserRequest;
-import org.example.springbootdeveloper.service.UserService;
+import org.example.springbootdeveloper.user.dto.AddUserRequest;
+import org.example.springbootdeveloper.user.service.UserService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 

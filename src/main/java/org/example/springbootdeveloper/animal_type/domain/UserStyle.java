@@ -1,4 +1,4 @@
-package org.example.springbootdeveloper.domain;
+package org.example.springbootdeveloper.animal_type.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

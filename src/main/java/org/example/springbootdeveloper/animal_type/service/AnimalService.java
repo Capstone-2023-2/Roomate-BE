@@ -1,13 +1,10 @@
-package org.example.springbootdeveloper.service;
+package org.example.springbootdeveloper.animal_type.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springbootdeveloper.domain.User;
-import org.example.springbootdeveloper.domain.UserAnimal;
-import org.example.springbootdeveloper.domain.UserStyle;
-import org.example.springbootdeveloper.dto.AddUserAnimalRequest;
-import org.example.springbootdeveloper.dto.AddUserStyleRequest;
-import org.example.springbootdeveloper.repository.UserAnimalRepository;
-import org.example.springbootdeveloper.repository.UserStyleRepository;
+import org.example.springbootdeveloper.animal_type.domain.UserAnimal;
+import org.example.springbootdeveloper.animal_type.domain.UserStyle;
+import org.example.springbootdeveloper.animal_type.repository.UserAnimalRepository;
+import org.example.springbootdeveloper.animal_type.repository.UserStyleRepository;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
