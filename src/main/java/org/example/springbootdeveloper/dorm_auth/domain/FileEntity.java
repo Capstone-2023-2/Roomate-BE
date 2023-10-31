@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity(name="file") // 테이블 명을 작성
 public class FileEntity {
-    @Id // primary key임을 명시
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long pid;
 
@@ -19,7 +19,7 @@ public class FileEntity {
     private String filename;
 
     @Column(nullable = false, updatable = false)
-    private String user_id;
+    private String userId;
 
     @Column(nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private String created_dt;

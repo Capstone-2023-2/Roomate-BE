@@ -1,8 +1,12 @@
 package org.example.springbootdeveloper.dorm_auth.controller;
 
+import jakarta.mail.MessagingException;
+import org.example.springbootdeveloper.email.dto.EmailAuthRequestDto;
+import org.example.springbootdeveloper.dorm_auth.service.FileSendService;
 import org.example.springbootdeveloper.dorm_auth.domain.FileEntity;
 import org.example.springbootdeveloper.dorm_auth.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,19 +17,21 @@ import java.io.*;
 import java.net.URLEncoder;
 import java.security.Principal;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping()
 public class FileController {
     private final FileRepository fileRepository;
+    private final FileSendService fileSendService;
     String filepath = "/Users/baesumin/Desktop/capston_backend/mate_backend/src/main/resources/static/images";
 
     /**
      *  이미지 업로드
      * @return Map<String, Object>
      */
-    @PostMapping("/auth/image")
+    @PostMapping("/auth/dorm/image")
     public FileEntity uploadImage(HttpServletRequest request,
                                   @RequestParam(value="file", required = false) MultipartFile[] files, Principal principal) {
 
@@ -44,10 +50,23 @@ public class FileController {
 
         final FileEntity file = FileEntity.builder()
                 .filename(safeFile)
-                .user_id(principal.getName())
+                .userId(principal.getName())
                 .build();
 
         return fileRepository.save(file);
+    }
+
+    @PostMapping("/auth/dorm/mail")
+    public ResponseEntity<String> mailConfirm(Principal principal) throws MessagingException, UnsupportedEncodingException {
+        String userId = principal.getName();
+        Optional<FileEntity> fileEntityOptional = fileRepository.findByUserId(userId);
+        if (fileEntityOptional.isPresent()) {
+            FileEntity fileEntity = fileEntityOptional.get();
+            String filename = fileEntity.getFilename();
+        }
+
+        fileSendService.sendDormEmail(userId);
+        return ResponseEntity.ok("Email send successfully");
     }
 
 }
