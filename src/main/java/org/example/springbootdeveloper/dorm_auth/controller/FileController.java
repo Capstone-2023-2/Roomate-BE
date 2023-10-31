@@ -1,11 +1,15 @@
 package org.example.springbootdeveloper.dorm_auth.controller;
 
 import jakarta.mail.MessagingException;
+import org.example.springbootdeveloper.dorm_auth.domain.DormAuthEntity;
+import org.example.springbootdeveloper.dorm_auth.repository.DormAuthRepository;
 import org.example.springbootdeveloper.email.dto.EmailAuthRequestDto;
 import org.example.springbootdeveloper.dorm_auth.service.FileSendService;
 import org.example.springbootdeveloper.dorm_auth.domain.FileEntity;
 import org.example.springbootdeveloper.dorm_auth.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
+import org.example.springbootdeveloper.user.domain.User;
+import org.example.springbootdeveloper.user.respository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,6 +29,7 @@ import java.util.Optional;
 public class FileController {
     private final FileRepository fileRepository;
     private final FileSendService fileSendService;
+    private final DormAuthRepository dormAuthRepository;
     String filepath = "/Users/baesumin/Desktop/capston_backend/mate_backend/src/main/resources/static/images";
 
     /**
@@ -65,9 +70,36 @@ public class FileController {
             String filename = fileEntity.getFilename();
         }
 
+
+        final DormAuthEntity dormAuth = DormAuthEntity.builder()
+                .userId(principal.getName())
+                .status(true)
+                .build();
+
+        dormAuthRepository.save(dormAuth);
+
         fileSendService.sendDormEmail(userId);
+
+
+
         return ResponseEntity.ok("Email send successfully");
     }
+/*
+    @PutMapping("/updateDormAuthStatus")
+    public ResponseEntity<String> updateDormAuthStatus(Principal principal) {
+        String userId = principal.getName();
+
+        Optional<User> userOptional = userRepository.findByUserId(userId);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            userRepository.save(User.builder()
+                    .dorm_auth_status(true)
+                            .build()).getId();
+        }
+        return ResponseEntity.ok("Email send successfully");
+    }
+
+ */
 
 }
 

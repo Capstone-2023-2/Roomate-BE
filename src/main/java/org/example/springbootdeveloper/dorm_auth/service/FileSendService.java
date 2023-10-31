@@ -63,6 +63,7 @@ public class FileSendService {
         }
 
         context.setVariable("image", filename);
+        context.setVariable("userId", userId);
         return templateEngine.process("dorm_auth", context); //dorm_auth.html
     }
 

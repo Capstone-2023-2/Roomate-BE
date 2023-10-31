@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileSendController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/service/FileSendService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/dorm_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/DormAuthEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/repository/DormAuthRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/FileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/FileEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/repository/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/repository/FileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileMailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/service/FileSendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/service/FileSendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dorm_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dorm_auth.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
       <workItem from="1697542342444" duration="5525000" />
       <workItem from="1697598759042" duration="2421000" />
       <workItem from="1698372813426" duration="9628000" />
-      <workItem from="1698739653015" duration="1394000" />
+      <workItem from="1698739653015" duration="10839000" />
     </task>
     <servers />
   </component>
@@ -118,6 +119,11 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="32f2e17b-c0f3-4339-b1f0-d80e9868d061" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -135,6 +141,11 @@
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="32f2e17b-c0f3-4339-b1f0-d80e9868d061">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -143,7 +154,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="dev/dorm_auth" />
                       </list>
                     </value>
                   </entry>

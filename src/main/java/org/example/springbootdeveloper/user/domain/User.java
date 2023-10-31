@@ -1,10 +1,7 @@
 package org.example.springbootdeveloper.user.domain;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -40,8 +37,9 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     @Column(name = "status")
     private Boolean status;
 
+
     @Builder
-    public User(String userId, String password, String email, String nickname, char gender, boolean status, String auth){
+    public User(String userId, String password, String email, String nickname, char gender, boolean status,String auth){
         this.userId = userId;
         this.password = password;
         this.email = email;
