@@ -38,8 +38,9 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                .requestMatchers("/login", "/signup", "/user", "/mailConfirm").permitAll()
-                .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/**").permitAll()
+                //.requestMatchers("/login", "/signup", "/user", "/mailConfirm", "/ws").permitAll()
+                //.requestMatchers("/auth/**").permitAll()
 
                 .anyRequest().authenticated()
                 .and()

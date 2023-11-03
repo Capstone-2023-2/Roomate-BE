@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/DormAuthEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/repository/DormAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/chat/controller/StompChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/chat/dto/ChatMessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/ChatConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/controller/FileMailController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/service/FileSendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/service/FileSendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dorm_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dorm_auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +110,8 @@
       <workItem from="1697598759042" duration="2421000" />
       <workItem from="1698372813426" duration="9628000" />
       <workItem from="1698739653015" duration="10839000" />
+      <workItem from="1699008637152" duration="3068000" />
+      <workItem from="1699018859815" duration="4491000" />
     </task>
     <servers />
   </component>
