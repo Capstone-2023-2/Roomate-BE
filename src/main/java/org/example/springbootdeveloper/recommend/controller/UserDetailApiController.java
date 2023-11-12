@@ -20,7 +20,7 @@ public class UserDetailApiController {
     private final DetailService detailService;
 
     @PostMapping("/detail")
-    public ResponseEntity<String> addUserStyle(@RequestBody AddUserDetailRequest request, Principal principal) {
+    public ResponseEntity<String> addUserDetail(@RequestBody AddUserDetailRequest request, Principal principal) {
         UserDetail savedUserDetail = detailService.save(request, principal.getName());
         return ResponseEntity.ok("User detail successfully");
     }
