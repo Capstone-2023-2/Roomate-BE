@@ -22,7 +22,6 @@ public class AnimalService {
     public UserAnimal save(String userId){
 
         UserStyle userStyle = loadUserByUsername(userId);
-        boolean userSensitive = true;
         String selectedAnimal = "";
         String[] animals = {"dog", "penguin", "rabbit", "polar bear", "quokka", "wolf", "cat", "arctic fox"};
 
@@ -57,6 +56,10 @@ public class AnimalService {
         };
         double day_average = (userStyles[0] + userStyles[1]) / 2.0;
         boolean day_night = (day_average <= 3);
+        double sensitive_average = (userStyles[2]+userStyles[4]+userStyles[6]+userStyles[9]+userStyles[11]+userStyles[13]+userStyles[15]+userStyles[17]+userStyles[20])
+                /9.0;
+        boolean userSensitive = (sensitive_average >2); //true - 민감, false -둔감
+
 
         if(userStyles[18]== 1){active = true;}
         else{active = false;}
