@@ -1,5 +1,6 @@
 package org.example.springbootdeveloper.recommend.controller;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.example.springbootdeveloper.recommend.domain.UserDetail;
 import org.example.springbootdeveloper.recommend.domain.UserStar;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -34,4 +36,12 @@ public class UserStarApiController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User star not found");
         }
     }
+
+    @GetMapping("/list/star")
+    public ResponseEntity<List<UserDetail>> getAllUserDetails(Principal principal){
+        List<UserDetail> userDetails = starService.showStarList(principal.getName());
+        return ResponseEntity.ok(userDetails);
+    }
+
+
 }

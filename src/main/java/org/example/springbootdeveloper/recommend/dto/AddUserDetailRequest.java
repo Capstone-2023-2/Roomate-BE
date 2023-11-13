@@ -19,7 +19,7 @@ public class AddUserDetailRequest {
     private Integer age;
     private String mbti;
 
-    public UserDetail toEntity(String userId){
+    public UserDetail toEntity(String userId, char gender){
         return UserDetail.builder()
                 .userId(userId)
                 .dorm(dorm)
