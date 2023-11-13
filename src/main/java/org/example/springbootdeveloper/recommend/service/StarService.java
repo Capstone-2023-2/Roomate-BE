@@ -8,14 +8,18 @@ import org.example.springbootdeveloper.recommend.dto.AddUserDetailRequest;
 import org.example.springbootdeveloper.recommend.dto.AddUserStarRequest;
 import org.example.springbootdeveloper.recommend.respository.UserDetailRepository;
 import org.example.springbootdeveloper.recommend.respository.UserStarRepository;
+import org.example.springbootdeveloper.user.domain.User;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
 public class StarService {
     private final UserStarRepository userStarRepository;
+    private final UserDetailRepository userDetailRepository;
     public UserStar save(String starId, String userId){
         UserStar userStar = UserStar.builder()
                 .userId(userId)
@@ -23,6 +27,7 @@ public class StarService {
                 .build();
         return userStarRepository.save(userStar);
     }
+
 
     public boolean delete(String starId, String userId) {
         Optional<UserStar> userStarOptional = userStarRepository.findByUserIdAndStarId(userId, starId);
@@ -36,5 +41,27 @@ public class StarService {
         }
     }
 
+
+    public List<UserDetail> showStarList(String userId) {
+        Optional<List<UserStar>> userOptional = userStarRepository.findByUserId(userId);
+        List<UserDetail> userDetails = new ArrayList<>();
+
+        if (userOptional.isPresent()) {
+            List<UserStar> userStars = userOptional.get();
+
+            for (UserStar userStar : userStars) {
+                String starId = userStar.getStarId();
+
+                // 현재 starId에 대한 UserDetail을 검색합니다.
+                Optional<UserDetail> userDetailOptional = userDetailRepository.findByUserId(starId);
+
+                // userDetailOptional이 존재하는 경우에만 정보를 결과 목록에 추가합니다.
+                userDetailOptional.ifPresent(userDetails::add);
+            }
+
+        }
+
+        return userDetails;
+    }
 
 }

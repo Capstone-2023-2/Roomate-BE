@@ -41,8 +41,16 @@ public class UserDetailApiController {
 
     @GetMapping("/list/total")
     public ResponseEntity<List<UserDetail>> getAllUserDetails(Principal principal){
-        List<UserDetail> userDetails = detailService.showTotalList(principal.getName());
+        List<UserDetail> userDetails = detailService.showFilteredUserList(principal.getName());
         return ResponseEntity.ok(userDetails);
     }
+/*
+    @GetMapping("/list/recommend")
+    public ResponseEntity<List<UserDetail>> getAllUserDetails(Principal principal){
+        List<UserDetail> userDetails = detailService.showFilteredUserList(principal.getName());
+        return ResponseEntity.ok(userDetails);
+    }
+
+ */
 
 }
