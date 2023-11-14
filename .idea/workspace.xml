@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/ww" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/FileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/dorm_auth/domain/FileEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/controller/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mate_backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mate_backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mate_backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,8 +101,9 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;28a93b9d03450515c6262d0b8f2e5c3a&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/baesumin/Desktop/capston_backend/mate_backend/src/main/frontend/Roomate-FE/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -70,7 +112,29 @@
       <recent name="org.example.springbootdeveloper.email.dto" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringBootDeveloperApplication">
+    <configuration name="mate_backend [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="SpringBootDeveloperApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mate_backend.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.springbootdeveloper.SpringBootDeveloperApplication" />
@@ -87,6 +151,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringBootDeveloperApplication" />
+        <item itemvalue="Gradle.mate_backend [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +182,9 @@
       <workItem from="1699870712833" duration="10501000" />
       <workItem from="1699892600295" duration="8552000" />
       <workItem from="1699929727747" duration="1317000" />
+      <workItem from="1699951298091" duration="6316000" />
+      <workItem from="1699971611251" duration="8507000" />
+      <workItem from="1699981171954" duration="5042000" />
     </task>
     <servers />
   </component>

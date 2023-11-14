@@ -24,3 +24,4 @@ public class FileEntity {
     @Column(nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private String created_dt;
 }
+

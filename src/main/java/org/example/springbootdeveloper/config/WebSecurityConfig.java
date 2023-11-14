@@ -43,7 +43,7 @@ public class WebSecurityConfig {
                 .authorizeRequests()
                 .requestMatchers("/**").permitAll()
                 //.requestMatchers("/login", "/signup", "/user", "/mailConfirm", "/ws").permitAll()
-                //.requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/api/**").permitAll()
 
                 .anyRequest().authenticated()
                 .and()

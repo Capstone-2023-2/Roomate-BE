@@ -1,0 +1,3 @@
+[submodule "src/main/frontend/Roomate-FE"]
+	path = src/main/frontend/Roomate-FE
+	url = https://github.com/Capstone-2023-2/Roomate-FE.git
