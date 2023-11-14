@@ -22,6 +22,4 @@ public class UserAnimalController {
         return ResponseEntity.ok("User animal successfully");
     }
 
-
-
 }

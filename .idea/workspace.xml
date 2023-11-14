@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/controller/UserDetailApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/controller/UserDetailApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/controller/UserStarApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/controller/UserStarApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/respository/UserDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/respository/UserDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/DetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/DetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +114,9 @@
       <workItem from="1699267803173" duration="1204000" />
       <workItem from="1699518751927" duration="730000" />
       <workItem from="1699530533549" duration="12847000" />
+      <workItem from="1699870712833" duration="10501000" />
+      <workItem from="1699892600295" duration="8552000" />
+      <workItem from="1699929727747" duration="1317000" />
     </task>
     <servers />
   </component>
