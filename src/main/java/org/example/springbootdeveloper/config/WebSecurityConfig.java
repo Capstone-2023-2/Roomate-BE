@@ -25,6 +25,8 @@ public class WebSecurityConfig {
 
     private final UserDetailService userService;
 
+
+
     // 스프링 시큐리티 기능 비활성화
     @Bean
     public WebSecurityCustomizer configure() {
@@ -36,6 +38,7 @@ public class WebSecurityConfig {
     // 특정 HTTP 요청에 대한 웹 기반 보안 구성
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.cors();
         return http
                 .authorizeRequests()
                 .requestMatchers("/**").permitAll()
@@ -64,6 +67,7 @@ public class WebSecurityConfig {
                 .invalidateHttpSession(true)
                 .and()
                 .csrf().disable()
+
                 .build();
     }
 
