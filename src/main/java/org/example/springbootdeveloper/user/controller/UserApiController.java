@@ -14,6 +14,11 @@ public class UserApiController {
         this.userService = userService;
     }
 
+    @GetMapping("/api/hello")
+    public String test() {
+        return "Hello, world!";
+    }
+
     @PostMapping("/user")
     public ResponseEntity<String> signup(@RequestBody AddUserRequest request) {
         userService.save(request); //회원 가입 메서드 호출
