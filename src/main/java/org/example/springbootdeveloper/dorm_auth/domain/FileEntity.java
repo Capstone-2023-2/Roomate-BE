@@ -18,7 +18,7 @@ public class FileEntity {
     @Column(nullable = false, unique = true, length = 1000)
     private String filename;
 
-    @Column(nullable = false, updatable = false)
+    @Column(name = "user_id",nullable = false, updatable = false)
     private String userId;
 
     @Column(nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")

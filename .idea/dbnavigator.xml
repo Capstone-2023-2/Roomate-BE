@@ -14,23 +14,12 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="9f41eda2-d533-4a0c-8606-76b6486dec1a">
       <console name="Connection" type="STANDARD" schema="aniroomie" session="Main"><![CDATA[select * from users]]></console>
-      <console name="Connection 1" type="STANDARD" schema="mysql" session="Main"><![CDATA[create database aniroomie;
+      <console name="Connection 1" type="STANDARD" schema="aniroomie" session="Main"><![CDATA[create database aniroomie;
 use aniroomie;
-
-CREATE TABLE users (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    userId VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255),
-    email VARCHAR(255) NOT NULL UNIQUE,
-    nickname VARCHAR(255) NOT NULL UNIQUE,
-    gender CHAR NOT NULL,
-    status BOOLEAN,
-    auth VARCHAR(255)
-);
 
 CREATE TABLE user_details (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(255) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
     dorm INT NOT NULL,
     room INT NOT NULL,
     gender CHAR(1),
@@ -42,56 +31,8 @@ CREATE TABLE user_details (
 
 CREATE TABLE user_stars (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(255) NOT NULL,
-    starId VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE dorm_auth (
-    pid BIGINT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(255) NOT NULL,
-    status BOOLEAN NOT NULL
-);
-
-CREATE TABLE file (
-    pid BIGINT PRIMARY KEY AUTO_INCREMENT,
-    filename VARCHAR(1000) NOT NULL UNIQUE,
-    userId VARCHAR(255) NOT NULL,
-    created_dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
-);
-
-CREATE TABLE user_animals (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(255),
-    sensitive BOOLEAN,
-    animal VARCHAR(255)
-);
-
-CREATE TABLE user_styles (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    userId VARCHAR(255),
-    bedtimeScore INT,
-    wakeupScore INT,
-    wakeupSensitivity INT,
-    cleaningScore INT,
-    cleaningSensitivity INT,
-    foodScore INT,
-    foodSensitivity INT,
-    cigaretteScore INT,
-    studyScore INT,
-    studySensitivity INT,
-    notebookScore INT,
-    notebookSensitivity INT,
-    alarmScore INT,
-    alarmSensitivity INT,
-    latestudyScore INT,
-    latestudySensitivity INT,
-    snoringScore INT,
-    snoringSensitivity INT,
-    friendlyScore INT,
-    inhomeScore INT,
-    inhomeSensitivity INT,
-    coldOrHot INT,
-    summerOrWinter INT
+    user_id VARCHAR(255) NOT NULL,
+    star_id VARCHAR(255) NOT NULL
 );]]></console>
     </connection>
   </component>
@@ -101,15 +42,20 @@ CREATE TABLE user_styles (
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
       <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="consoles/Connection 1" />
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_details" />
       <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="consoles/Connection" />
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/users" />
+      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_animals" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_animals" active-filter-id="" />
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_details" active-filter-id="" />
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="mysql.user" active-filter-id="" />
-    <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.users" active-filter-id="" />
+    <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.users" active-filter-id="0a6f590c-9248-4f40-bde5-1470102b00f3">
+      <filter id="0a6f590c-9248-4f40-bde5-1470102b00f3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_stars" active-filter-id="" />
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.dorm_auth" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">

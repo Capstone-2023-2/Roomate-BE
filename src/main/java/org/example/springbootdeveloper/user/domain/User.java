@@ -19,7 +19,7 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @Column(name = "userId", nullable = false, unique = true)
+    @Column(name = "user_id", nullable = false, unique = true)
     private String userId;
 
     @Column(name="password")

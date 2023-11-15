@@ -22,4 +22,10 @@ public class UserAnimalController {
         return ResponseEntity.ok("User animal successfully");
     }
 
+    @PostMapping("/test/animal")
+    public ResponseEntity<String> addAnimalStyle() {
+        UserAnimal saveduserAnimal = animalService.addSampleUserAnimal();
+        return ResponseEntity.ok("User animal successfully");
+    }
+
 }
