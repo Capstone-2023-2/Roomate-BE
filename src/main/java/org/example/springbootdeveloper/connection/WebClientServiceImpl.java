@@ -18,14 +18,14 @@ public class WebClientServiceImpl {
         WebClient webClient =
                 WebClient
                         .builder()
-                        .baseUrl("http://ANIroomi-env.eba-rj7upyms.ap-northeast-2.elasticbeanstalk.com")
+                        .baseUrl("https://874f-219-255-207-60.ngrok-free.app")
                         .build();
 
         // api 요청
         String response =
                 webClient
                         .get()
-                        .uri("/api/hello")
+                        .uri("/hello")
                         .retrieve()
                         .bodyToMono(String.class)
                         .block();

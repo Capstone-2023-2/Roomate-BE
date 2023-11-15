@@ -19,6 +19,15 @@ public class UserDetail {
     @Column(name = "user_id", nullable = false)
     private String userId;
 
+    @Column(name = "nickname", nullable = false, unique = true)
+    private String nickname;
+
+    @Column(name = "sensitivity")
+    private boolean sensitive; //예민하면 true, 아니면 false
+    private String animal;
+
+
+
     @Column(name = "dorm", nullable = false)
     private int dorm; //308, 309
 
@@ -42,7 +51,7 @@ public class UserDetail {
 
 
     @Builder
-    public UserDetail(String userId, int dorm, int room, char gender, String dept, Integer stu_num, Integer age, String mbti)
+    public UserDetail(String userId, int dorm, int room, char gender, String dept, Integer stu_num, Integer age, String mbti, boolean sensitive, String animal, String nickname)
     {
         this.userId = userId;
         this.dorm = dorm;
@@ -52,5 +61,8 @@ public class UserDetail {
         this.stu_num = stu_num;
         this.age = age;
         this.mbti = mbti;
+        this.nickname = nickname;
+        this.animal = animal;
+        this.sensitive = sensitive;
     }
 }

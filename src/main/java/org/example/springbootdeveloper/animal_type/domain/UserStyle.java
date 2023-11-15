@@ -15,34 +15,78 @@ public class UserStyle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false)
     private Long id;
-
     @Column(name = "user_id")
     private String userId;
 
-
+    @Column(name = "bedtime_score")
     private int bedtimeScore;
+
+    @Column(name = "wakeup_score")
     private int wakeupScore;
+
+    @Column(name = "wakeup_sensitivity")
     private int wakeupSensitivity;
+
+    @Column(name = "cleaning_score")
     private int cleaningScore;
+
+    @Column(name = "cleaning_sensitivity")
     private int cleaningSensitivity;
+
+    @Column(name = "food_score")
     private int foodScore;
+
+    @Column(name = "food_sensitivity")
     private int foodSensitivity;
+
+    @Column(name = "cigarette_score")
     private int cigaretteScore;
+
+    @Column(name = "study_score")
     private int studyScore;
+
+    @Column(name = "study_sensitivity")
     private int studySensitivity;
+
+    @Column(name = "notebook_score")
     private int notebookScore;
+
+    @Column(name = "notebook_sensitivity")
     private int notebookSensitivity;
+
+    @Column(name = "alarm_score")
     private int alarmScore;
+
+    @Column(name = "alarm_sensitivity")
     private int alarmSensitivity;
+
+    @Column(name = "latestudy_score")
     private int latestudyScore;
+
+    @Column(name = "latestudy_sensitivity")
     private int latestudySensitivity;
+
+    @Column(name = "snoring_score")
     private int snoringScore;
+
+    @Column(name = "snoring_sensitivity")
     private int snoringSensitivity;
+
+    @Column(name = "friendly_score")
     private int friendlyScore;
+
+    @Column(name = "inhome_score")
     private int inhomeScore;
+
+    @Column(name = "inhome_sensitivity")
     private int inhomeSensitivity;
+
+    @Column(name = "cold_or_hot")
     private int coldOrHot;
+
+    @Column(name = "summer_or_winter")
     private int summerOrWinter;
+
 
 
     @Builder

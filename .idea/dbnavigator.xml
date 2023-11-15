@@ -18,8 +18,11 @@
 use aniroomie;
 
 CREATE TABLE user_details (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     user_id VARCHAR(255) NOT NULL,
+    nickname VARCHAR(255) NOT NULL UNIQUE,
+    sensitivity BOOLEAN,
+    animal VARCHAR(255),
     dorm INT NOT NULL,
     room INT NOT NULL,
     gender CHAR(1),
@@ -27,12 +30,6 @@ CREATE TABLE user_details (
     stu_num INT,
     age INT,
     mbti VARCHAR(255)
-);
-
-CREATE TABLE user_stars (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    user_id VARCHAR(255) NOT NULL,
-    star_id VARCHAR(255) NOT NULL
 );]]></console>
     </connection>
   </component>
@@ -42,8 +39,6 @@ CREATE TABLE user_stars (
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
       <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="consoles/Connection 1" />
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="consoles/Connection" />
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_animals" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
@@ -55,6 +50,7 @@ CREATE TABLE user_stars (
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_styles" active-filter-id="" />
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_stars" active-filter-id="" />
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.dorm_auth" active-filter-id="" />
   </component>
