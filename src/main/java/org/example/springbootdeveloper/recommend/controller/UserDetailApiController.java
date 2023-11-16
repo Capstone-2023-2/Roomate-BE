@@ -14,10 +14,7 @@ import org.example.springbootdeveloper.recommend.service.DetailService;
 import org.example.springbootdeveloper.user.domain.User;
 import org.example.springbootdeveloper.user.respository.UserRepository;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
@@ -47,11 +44,29 @@ public class UserDetailApiController {
         return ResponseEntity.ok("User detail successfully");
     }
 
+    @PostMapping("/detail/{userId}")
+    public ResponseEntity<String> addUserDetail(@RequestBody AddUserDetailRequest request, @PathVariable String userId) {
+        //Optional<User> userOptional = userRepository.findByUserId(userId);
+        Optional<UserAnimal> userAnimalOptional = userAnimalRepository.findByUserId(userId);
+        if (userAnimalOptional.isPresent()) {
+            UserAnimal userAnimal = userAnimalOptional.get();
+            char gender = 'M';
+            String nickname = "aniroomie" + userId;
+            boolean sensitive = userAnimal.isSensitive();
+            String animal = userAnimal.getAnimal();
+            UserDetail savedUserDetail = detailService.save(request, userId, gender, sensitive, animal, nickname);
+        }
+
+        return ResponseEntity.ok("User detail successfully");
+    }
+
     @GetMapping("/list/total")
     public ResponseEntity<List<UserDetail>> getAllUserDetails(Principal principal){
         List<UserDetail> userDetails = detailService.showFilteredUserList(principal.getName());
         return ResponseEntity.ok(userDetails);
     }
+
+
 
 /*
     @GetMapping("/list/recommend")
