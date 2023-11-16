@@ -85,7 +85,17 @@ public class HeartService {
             sleep = 1;
         }
 
-        temperature=3; //일단 임시값
+        if(userStyle.getColdOrHot()==2){
+            temperature= 5;
+        } else if (userStyle.getColdOrHot()==3) {
+            temperature=4;
+        }
+        else if (userStyle.getColdOrHot()==1) {
+            temperature=4;
+        }
+        else{
+            temperature=1;
+        }
 
         UserHeartDTO userHeartDTO = UserHeartDTO.builder()
                 .rhythm(rhythm)

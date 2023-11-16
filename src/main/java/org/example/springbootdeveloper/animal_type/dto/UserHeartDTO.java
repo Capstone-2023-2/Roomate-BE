@@ -1,7 +1,12 @@
 package org.example.springbootdeveloper.animal_type.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@Getter
 public class UserHeartDTO {
     private String rhythm;
     private String smoke;
