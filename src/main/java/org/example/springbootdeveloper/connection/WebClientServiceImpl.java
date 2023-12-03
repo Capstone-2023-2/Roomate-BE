@@ -26,7 +26,7 @@ public class WebClientServiceImpl {
         Map<String, Object> bodyMap = new HashMap<>();
         if(userId == "1111") {
 
-            bodyMap.put("userId", 1111);
+            bodyMap.put("userId", "1111");
             bodyMap.put("bedtimeScore", 3);
             bodyMap.put("wakeupScore", 3);
             bodyMap.put("wakeupSensitivity", 1);
@@ -52,7 +52,7 @@ public class WebClientServiceImpl {
             bodyMap.put("summerOrWinter", 1);
         }
         else{
-            bodyMap.put("userId", 2222);
+            bodyMap.put("userId", "2222");
             bodyMap.put("bedtimeScore", 4);
             bodyMap.put("wakeupScore", 3);
             bodyMap.put("wakeupSensitivity", 1);
@@ -84,7 +84,7 @@ public class WebClientServiceImpl {
         WebClient webClient =
                 WebClient
                         .builder()
-                        .baseUrl("https://4b8e-219-255-207-139.ngrok-free.app")
+                        .baseUrl("https://490c-58-76-166-214.ngrok-free.app")
                         .build();
 
         // api 요청
@@ -106,10 +106,10 @@ public class WebClientServiceImpl {
         Map<String, Object> newBodyMap = new HashMap<>();
         if(userId == "1111") {
 
-            newBodyMap.put("userId", 1111);
+            newBodyMap.put("userId", "1111");
         }
         else{
-            newBodyMap.put("userId", 2222);
+            newBodyMap.put("userId", "2222");
         }
 
         // Populate newBodyMap with the required parameters for the new endpoint
@@ -118,7 +118,7 @@ public class WebClientServiceImpl {
         WebClient webClient =
                 WebClient
                         .builder()
-                        .baseUrl("https://4b8e-219-255-207-139.ngrok-free.app")
+                        .baseUrl("https://490c-58-76-166-214.ngrok-free.app")
                         // Add any additional configuration if needed
                         .build();
 

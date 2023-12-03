@@ -54,7 +54,14 @@ public class RecommendService {
         if (userDetailOptional.isPresent()) {
             UserDetail userDetail = userDetailOptional.get();
             userCardDTO.setNickname(userDetail.getNickname());
-            userCardDTO.setAnimal(userDetail.getAnimal());
+            String animal = userDetail.getAnimal();
+            if(animal == "polar bear"){
+                animal = "polarBear";
+            }
+            else if(animal == "arctic fox"){
+                animal = "arcticFox";
+            }
+            userCardDTO.setAnimal(animal);
             userCardDTO.setDorm(userDetail.getDorm());
             userCardDTO.setRoom(userDetail.getRoom());
             userCardDTO.setAge(userDetail.getAge());

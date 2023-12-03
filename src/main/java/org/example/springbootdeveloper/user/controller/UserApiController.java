@@ -27,13 +27,14 @@ public class UserApiController {
         return "Hello, world!";
     }
 
-    @PostMapping("/user")
+    @PostMapping("/api/user")
     public ResponseEntity<String> signup(@RequestBody AddUserRequest request) {
         userService.save(request); //회원 가입 메서드 호출
         return ResponseEntity.ok("User signed up successfully");
     }
 
     @GetMapping("/nickname")
+    //@CrossOrigin(origins = {"http://ANIroomi-env.eba-rj7upyms.ap-northeast-2.elasticbeanstalk.com", "http://localhost:3000"}, allowedHeaders = "*")
     public ResponseEntity<String> nickname(Principal principal){
         Optional<User> userOptional = userRepository.findByUserId(principal.getName());
         String nickname;

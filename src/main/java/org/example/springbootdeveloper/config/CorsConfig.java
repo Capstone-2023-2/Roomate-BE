@@ -14,18 +14,22 @@ public class CorsConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
+        //allowCredentials(true)
 
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://ANIroomi-env.eba-rj7upyms.ap-northeast-2.elasticbeanstalk.com"));
+
+        config.setAllowedOrigins(List.of("http://ANIroomi-env.eba-rj7upyms.ap-northeast-2.elasticbeanstalk.com","http://localhost:3000"));
+        //config.setAllowedOrigins(List.of("*"));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setExposedHeaders(List.of("*"));
+
+
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;
     }
-
-
 
 }
