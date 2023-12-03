@@ -18,8 +18,11 @@ public class AddUserDetailRequest {
     private Integer stu_num;
     private Integer age;
     private String mbti;
+    private boolean sensitive;
+    private String animal;
+    private String nickname;
 
-    public UserDetail toEntity(String userId, char gender){
+    public UserDetail toEntity(String userId, char gender, boolean sensitive, String animal, String nickname){
         return UserDetail.builder()
                 .userId(userId)
                 .dorm(dorm)
@@ -29,6 +32,9 @@ public class AddUserDetailRequest {
                 .stu_num(stu_num)
                 .age(age)
                 .mbti(mbti)
+                .nickname(nickname)
+                .animal(animal)
+                .sensitive(sensitive)
                 .build();
     }
 }

@@ -13,7 +13,7 @@ public class DormAuthEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long pid;
 
-    @Column(nullable = false, updatable = false)
+    @Column(name = "user_id",nullable = false, updatable = false)
     private String userId;
 
     @Column(nullable = false)

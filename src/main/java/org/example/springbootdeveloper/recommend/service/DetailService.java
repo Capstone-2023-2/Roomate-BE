@@ -16,8 +16,8 @@ import java.util.Optional;
 @Service
 public class DetailService {
     private final UserDetailRepository userDetailRepository;
-    public UserDetail save(AddUserDetailRequest request, String userId, char gender){
-        return userDetailRepository.save(request.toEntity(userId, gender));
+    public UserDetail save(AddUserDetailRequest request, String userId, char gender, boolean sensitive, String animal, String nickname){
+        return userDetailRepository.save(request.toEntity(userId, gender, sensitive, animal, nickname));
     }
 
     public List<UserDetail> showTotalList(String userId){

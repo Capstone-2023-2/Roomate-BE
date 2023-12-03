@@ -16,9 +16,10 @@ public class UserAnimal {
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private String userId;
 
+    @Column(name = "sensitivity")
     private boolean sensitive; //예민하면 true, 아니면 false
     private String animal;
 
@@ -29,4 +30,5 @@ public class UserAnimal {
         this.sensitive = sensitive;
         this.animal = animal;
     }
+
 }
