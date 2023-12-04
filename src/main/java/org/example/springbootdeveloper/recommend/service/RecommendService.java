@@ -6,10 +6,14 @@ import org.example.springbootdeveloper.animal_type.dto.UserHeartDTO;
 import org.example.springbootdeveloper.animal_type.service.HeartService;
 import org.example.springbootdeveloper.connection.WebClientServiceImpl;
 import org.example.springbootdeveloper.recommend.domain.UserDetail;
+import org.example.springbootdeveloper.recommend.domain.UserStar;
 import org.example.springbootdeveloper.recommend.dto.UserCardDTO;
 import org.example.springbootdeveloper.recommend.respository.UserDetailRepository;
+import org.example.springbootdeveloper.recommend.respository.UserStarRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -20,6 +24,7 @@ public class RecommendService {
     private final WebClientServiceImpl webClientServiceImpl;
     private final HeartService heartService;
     private final UserDetailRepository userDetailRepository;
+    private final UserStarRepository userStarRepository;
     public Map<String, UserCardDTO> getCards(String id) {
         Map<String, UserCardDTO> userCardDTOMap = new HashMap<>();
 
@@ -37,7 +42,7 @@ public class RecommendService {
         Map<String, UserCardDTO> userCardDTOMap = new HashMap<>();
 
         // 여러 사용자에 대한 정보를 가져오는 로직
-        for (int userId : getUserValues(id)) {
+        for (int userId : getUserNewValues(id)) {
             String userIdString = String.valueOf(userId);
             UserCardDTO userCardDTO = makeUserCard(userIdString);
             userCardDTOMap.put(userIdString, userCardDTO);
@@ -46,10 +51,23 @@ public class RecommendService {
         return userCardDTOMap;
     }
 
-    private UserCardDTO makeUserCard(String userId) {
+    public UserCardDTO makeUserCard(String userId) {
         UserCardDTO userCardDTO = new UserCardDTO();
         UserHeartDTO userHeartDTO = heartService.makeUserHeart(userId);
         Optional<UserDetail> userDetailOptional = userDetailRepository.findByUserId(userId);
+        Boolean star;
+
+        String originUserId = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        Optional<UserStar> userStarOptional = userStarRepository.findByUserIdAndStarId(originUserId, userId);
+
+        if (userStarOptional.isPresent()) {
+            star = true; //찜하기 해놓은 사람
+
+
+        } else {
+            star = false;
+        }
 
         if (userDetailOptional.isPresent()) {
             UserDetail userDetail = userDetailOptional.get();
@@ -61,6 +79,7 @@ public class RecommendService {
             else if(animal == "arctic fox"){
                 animal = "arcticFox";
             }
+            userCardDTO.setStar(star);
             userCardDTO.setAnimal(animal);
             userCardDTO.setDorm(userDetail.getDorm());
             userCardDTO.setRoom(userDetail.getRoom());
@@ -101,5 +120,8 @@ public class RecommendService {
 
         return userValues;
     }
+
+
+
 
 }

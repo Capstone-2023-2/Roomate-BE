@@ -19,20 +19,6 @@ public class AnimalService {
                 .orElseThrow(() -> new IllegalArgumentException(userId));
     }
 
-    public UserAnimal addSampleUserAnimal() {
-        // 임의의 데이터로 UserAnimal 객체 생성
-        UserAnimal userAnimal = UserAnimal.builder()
-                .userId("sampleUser")
-                .sensitive(true)
-                .animal("Cat")
-                .build();
-
-        // 저장
-        userAnimalRepository.save(userAnimal);
-
-        System.out.println("Sample UserAnimal added successfully!");
-        return userAnimal;
-    }
 
     public UserAnimal save(String userId){
 

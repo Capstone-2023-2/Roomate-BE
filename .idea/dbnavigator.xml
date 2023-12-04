@@ -67,10 +67,9 @@ ser_details]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_details" />
-      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/users" />
       <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_styles" />
       <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_stars" />
+      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_details" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">

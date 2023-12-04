@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/WebErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/Chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package.json" afterDir="false" />
@@ -15,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/public/Quokka.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/public/quokka.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/constants/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/constants/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/Chat.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/roommatelist/Tab1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/roommatelist/Tab1.tsx" afterDir="false" />
@@ -22,15 +22,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/secondexample/SecondExample.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/connection/WebClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/connection/WebClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/RecommendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/controller/UserApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/cat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/cat.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/morning.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/morning.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/wolf.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/wolf.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +77,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/frontend/Roomate-FE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -125,7 +118,7 @@
       <recent name="org.example.springbootdeveloper.email.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootDeveloperApplication">
+  <component name="RunManager" selected="Gradle.mate_backend [build]">
     <configuration name="mate_backend [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SpringBootDeveloperApplication" />
         <item itemvalue="Gradle.mate_backend [build]" />
+        <item itemvalue="Spring Boot.SpringBootDeveloperApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +211,13 @@
       <workItem from="1701507349065" duration="486000" />
       <workItem from="1701591637085" duration="6872000" />
       <workItem from="1701606213715" duration="2812000" />
+      <workItem from="1701622170775" duration="2524000" />
+      <workItem from="1701659518361" duration="8882000" />
+      <workItem from="1701684289965" duration="3241000" />
+      <workItem from="1701689949958" duration="128000" />
+      <workItem from="1701690620964" duration="51000" />
+      <workItem from="1701690797837" duration="681000" />
+      <workItem from="1701692894834" duration="4862000" />
     </task>
     <servers />
   </component>
@@ -260,7 +260,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev/recommand" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

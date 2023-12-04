@@ -6,6 +6,7 @@ import org.example.springbootdeveloper.recommend.domain.UserDetail;
 import org.example.springbootdeveloper.recommend.domain.UserStar;
 import org.example.springbootdeveloper.recommend.dto.AddUserDetailRequest;
 import org.example.springbootdeveloper.recommend.dto.AddUserStarRequest;
+import org.example.springbootdeveloper.recommend.dto.UserCardDTO;
 import org.example.springbootdeveloper.recommend.service.DetailService;
 import org.example.springbootdeveloper.recommend.service.StarService;
 import org.springframework.http.HttpStatus;
@@ -38,9 +39,9 @@ public class UserStarApiController {
     }
 
     @GetMapping("/list/star")
-    public ResponseEntity<List<UserDetail>> getAllUserDetails(Principal principal){
-        List<UserDetail> userDetails = starService.showStarList(principal.getName());
-        return ResponseEntity.ok(userDetails);
+    public ResponseEntity<List<UserCardDTO>> getAllUserDetails(Principal principal){
+        List<UserCardDTO> userCardDTOs = starService.showStarList(principal.getName());
+        return ResponseEntity.ok(userCardDTOs);
     }
 
 
