@@ -6,6 +6,7 @@ import org.example.springbootdeveloper.recommend.domain.UserDetail;
 import org.example.springbootdeveloper.recommend.domain.UserStar;
 import org.example.springbootdeveloper.recommend.dto.AddUserDetailRequest;
 import org.example.springbootdeveloper.recommend.dto.AddUserStarRequest;
+import org.example.springbootdeveloper.recommend.dto.UserCardDTO;
 import org.example.springbootdeveloper.recommend.respository.UserDetailRepository;
 import org.example.springbootdeveloper.recommend.respository.UserStarRepository;
 import org.example.springbootdeveloper.user.domain.User;
@@ -20,6 +21,7 @@ import java.util.Optional;
 public class StarService {
     private final UserStarRepository userStarRepository;
     private final UserDetailRepository userDetailRepository;
+    private final RecommendService recommendService;
     public UserStar save(String starId, String userId){
         UserStar userStar = UserStar.builder()
                 .userId(userId)
@@ -42,9 +44,10 @@ public class StarService {
     }
 
 
-    public List<UserDetail> showStarList(String userId) {
+    public List<UserCardDTO> showStarList(String userId) {
         Optional<List<UserStar>> userOptional = userStarRepository.findByUserId(userId);
-        List<UserDetail> userDetails = new ArrayList<>();
+        UserCardDTO userCardDTO = new UserCardDTO();
+        List<UserCardDTO> userCardDTOs = new ArrayList<>();
 
         if (userOptional.isPresent()) {
             List<UserStar> userStars = userOptional.get();
@@ -56,12 +59,17 @@ public class StarService {
                 Optional<UserDetail> userDetailOptional = userDetailRepository.findByUserId(starId);
 
                 // userDetailOptional이 존재하는 경우에만 정보를 결과 목록에 추가합니다.
-                userDetailOptional.ifPresent(userDetails::add);
+                if (userDetailOptional.isPresent()) {
+                    UserDetail userDetail = userDetailOptional.get();
+                    userCardDTO = recommendService.makeUserCard(userId);
+                    userCardDTOs.add(userCardDTO);
+                }
             }
 
         }
+        return  userCardDTOs;
 
-        return userDetails;
+
     }
 
 }

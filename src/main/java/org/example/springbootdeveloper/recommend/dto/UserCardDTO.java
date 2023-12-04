@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class UserCardDTO {
+    private Boolean star;
     private String nickname;
     private String animal;
     private int dorm;

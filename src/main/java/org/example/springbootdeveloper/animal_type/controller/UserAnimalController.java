@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 
@@ -36,33 +38,38 @@ public class UserAnimalController {
     }
 
     @GetMapping("/animal")
-    public ResponseEntity<String> nickname(Principal principal) {
+    public ResponseEntity<Map<String, Object>> nickname(Principal principal) {
         Optional<UserAnimal> userAnimalOptional = userAnimalRepository.findByUserId(principal.getName());
-        String animal;
+        Map<String, Object> response = new HashMap<>();
+
         if (userAnimalOptional.isPresent()) {
             UserAnimal userAnimal = userAnimalOptional.get();
+            String animal = userAnimal.getAnimal();
+            boolean sensitive = userAnimal.isSensitive();
 
-            animal = userAnimal.getAnimal();
-
-            // 띄어쓰기가 있는 경우 모든 단어를 붙여서 반환
-            if(animal == "polar bear"){
+            // Replace spaces with camelCase for animal names
+            if ("polar bear".equals(animal)) {
                 animal = "polarBear";
-            }
-            else if(animal == "arctic fox"){
+            } else if ("arctic fox".equals(animal)) {
                 animal = "arcticFox";
             }
 
+            response.put("animal", animal);
+            response.put("sensitive", sensitive);
         } else {
-            animal = "";
+            response.put("animal", "");
+            response.put("sensitive", false);
         }
-        return ResponseEntity.ok().body(animal);
+
+        return ResponseEntity.ok().body(response);
     }
-
-
+/*
     @PostMapping("/test/animal")
     public ResponseEntity<String> addAnimalStyle() {
         UserAnimal saveduserAnimal = animalService.addSampleUserAnimal();
         return ResponseEntity.ok("User animal successfully");
     }
+
+ */
 
 }
