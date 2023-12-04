@@ -59,6 +59,10 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
         return userId;
     }
 
+    public Boolean isStatus(){
+        return status;
+    }
+
     // 사용자의 패스워드를 반환
     @Override
     public String getPassword(){
@@ -94,8 +98,7 @@ public class User implements UserDetails { // UserDetails를 상속받아 인증
     }
 
 
-
-
-
-
+    public void setStatus(boolean newStatus) {
+        this.status = newStatus;
+    }
 }

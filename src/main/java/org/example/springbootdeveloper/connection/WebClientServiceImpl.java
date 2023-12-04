@@ -84,7 +84,7 @@ public class WebClientServiceImpl {
         WebClient webClient =
                 WebClient
                         .builder()
-                        .baseUrl("https://490c-58-76-166-214.ngrok-free.app")
+                        .baseUrl("https://f1e5-58-76-166-214.ngrok-free.app")
                         .build();
 
         // api 요청
@@ -118,7 +118,7 @@ public class WebClientServiceImpl {
         WebClient webClient =
                 WebClient
                         .builder()
-                        .baseUrl("https://490c-58-76-166-214.ngrok-free.app")
+                        .baseUrl("https://f1e5-58-76-166-214.ngrok-free.app")
                         // Add any additional configuration if needed
                         .build();
 

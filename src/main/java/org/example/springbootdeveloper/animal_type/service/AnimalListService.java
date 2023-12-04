@@ -32,42 +32,42 @@ public class AnimalListService {
 
         switch (name) {
             case "penguin":
-                features = "Enjoys welcoming mornings as a morning person, seeks intimate relationships with roommates, prefers winter over summer";
+                features = "상쾌한 아침을 맞이하는 아침형 인간으로, 룸메이트와 친밀한 관계를 얻길 원하고 여름보단 겨울을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("penguin", "dog");
                 incompatibleRoommates = Arrays.asList("cat", "arctic fox");
                 break;
             case "dog":
-                features = "Enjoys welcoming mornings as a morning person, seeks intimate relationships with roommates, prefers summer over winter";
+                features = "상쾌한 아침을 맞이하는 아침형 인간으로, 룸메이트와 친밀한 관계를 얻길 원하고 겨울보단 여름을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("dog", "penguin");
                 incompatibleRoommates = Arrays.asList("arctic fox", "cat");
                 break;
             case "polar bear":
-                features = "Enjoys welcoming mornings as a morning person, values alone time, prefers winter over summer";
+                features = "상쾌한 아침을 맞이하는 아침형 인간으로, 혼자만의 시간을 중요하게 생각하고 여름보단 겨울을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("polar bear", "rabbit");
                 incompatibleRoommates = Arrays.asList("quokka", "wolf");
                 break;
             case "rabbit":
-                features = "Enjoys welcoming mornings as a morning person, values alone time, prefers summer over winter";
+                features = "상쾌한 아침을 맞이하는 아침형 인간으로, 혼자만의 시간을 중요하게 생각하고 겨울보단 여름을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("rabbit", "polar bear");
                 incompatibleRoommates = Arrays.asList("wolf", "quokka");
                 break;
             case "wolf":
-                features = "Appreciates the quiet of the night as an evening person, seeks intimate relationships with roommates, prefers winter over summer";
+                features = "새벽의 고요함을 즐기는 저녁형 인간으로, 룸메이트와 친밀한 관계를 얻길 원하고 여름보단 겨울을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("wolf", "quokka");
                 incompatibleRoommates = Arrays.asList("rabbit", "polar bear");
                 break;
             case "quokka":
-                features = "Appreciates the quiet of the night as an evening person, seeks intimate relationships with roommates, prefers summer over winter";
+                features = "새벽의 고요함을 즐기는 저녁형 인간으로, 룸메이트와 친밀한 관계를 얻길 원하고 겨울보단 여름을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("quokka", "wolf");
                 incompatibleRoommates = Arrays.asList("polar bear", "rabbit");
                 break;
             case "arctic fox":
-                features = "Appreciates the quiet of the night as an evening person, seeks intimate relationships with roommates, prefers winter over summer";
+                features = "새벽의 고요함을 즐기는 저녁형 인간으로, 혼자만의 시간을 중요하게 생각하고 여름보단 겨울을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("arctic fox", "cat");
                 incompatibleRoommates = Arrays.asList("dog", "penguin");
                 break;
             case "cat":
-                features = "Appreciates the quiet of the night as an evening person, seeks intimate relationships with roommates, prefers summer over winter";
+                features = "새벽의 고요함을 즐기는 저녁형 인간으로, 혼자만의 시간을 중요하게 생각하고 겨울보단 여름을 좋아하는 성향이 있다.";
                 wellMatchedRoommates = Arrays.asList("cat", "arctic fox");
                 incompatibleRoommates = Arrays.asList("penguin", "dog");
                 break;
