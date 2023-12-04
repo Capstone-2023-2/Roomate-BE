@@ -21,9 +21,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/secondexample/SecondExample.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/UserAnimalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/dto/UserCardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/dto/UserCardDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/RecommendService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/StarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/recommend/service/StarService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,17 +45,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="mate_backend" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mate_backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mate_backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -119,7 +105,7 @@
       <recent name="org.example.springbootdeveloper.email.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootDeveloperApplication">
+  <component name="RunManager" selected="Gradle.mate_backend [build]">
     <configuration name="mate_backend [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -157,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SpringBootDeveloperApplication" />
         <item itemvalue="Gradle.mate_backend [build]" />
+        <item itemvalue="Spring Boot.SpringBootDeveloperApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +199,11 @@
       <workItem from="1701591637085" duration="6872000" />
       <workItem from="1701606213715" duration="2812000" />
       <workItem from="1701622170775" duration="2524000" />
-      <workItem from="1701659518361" duration="7940000" />
+      <workItem from="1701659518361" duration="8882000" />
+      <workItem from="1701684289965" duration="3241000" />
+      <workItem from="1701689949958" duration="128000" />
+      <workItem from="1701690620964" duration="51000" />
+      <workItem from="1701690797837" duration="681000" />
     </task>
     <servers />
   </component>

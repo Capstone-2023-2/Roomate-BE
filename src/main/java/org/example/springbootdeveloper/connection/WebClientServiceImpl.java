@@ -1,8 +1,8 @@
 package org.example.springbootdeveloper.connection;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.springbootdeveloper.animal_type.domain.UserAnimal;
-import org.example.springbootdeveloper.user.domain.User;
+import org.example.springbootdeveloper.animal_type.domain.UserStyle;
+import org.example.springbootdeveloper.animal_type.repository.UserStyleRepository;
 import org.example.springbootdeveloper.user.respository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,70 +15,69 @@ import java.util.Optional;
 @Slf4j
 public class WebClientServiceImpl {
     private final UserRepository userRepository;
+    private final UserStyleRepository userStyleRepository;
 
-    public WebClientServiceImpl(UserRepository userRepository) {
+
+    public WebClientServiceImpl(UserRepository userRepository, UserStyleRepository userStyleRepository) {
         this.userRepository = userRepository;
+        this.userStyleRepository = userStyleRepository;
     }
 
     public  Map<String, Object> post(String userId) {
-
+        UserStyle userStyle = loadUserByUsername(userId);
+        int[] userStyles = {
+                userStyle.getBedtimeScore(),
+                userStyle.getWakeupScore(),
+                userStyle.getWakeupSensitivity(),
+                userStyle.getCleaningScore(),
+                userStyle.getCleaningSensitivity(),
+                userStyle.getFoodScore(),
+                userStyle.getFoodSensitivity(),
+                userStyle.getCigaretteScore(),
+                userStyle.getStudyScore(),
+                userStyle.getStudySensitivity(),
+                userStyle.getNotebookScore(),
+                userStyle.getNotebookSensitivity(),
+                userStyle.getAlarmScore(),
+                userStyle.getAlarmSensitivity(),
+                userStyle.getLatestudyScore(),
+                userStyle.getLatestudySensitivity(),
+                userStyle.getSnoringScore(),
+                userStyle.getSnoringSensitivity(),
+                userStyle.getFriendlyScore(),
+                userStyle.getInhomeScore(),
+                userStyle.getInhomeSensitivity(),
+                userStyle.getColdOrHot(),
+                userStyle.getSummerOrWinter()
+        };
 
         Map<String, Object> bodyMap = new HashMap<>();
-        if(userId == "1111") {
 
-            bodyMap.put("userId", "1111");
-            bodyMap.put("bedtimeScore", 3);
-            bodyMap.put("wakeupScore", 3);
-            bodyMap.put("wakeupSensitivity", 1);
-            bodyMap.put("cleaningScore", 3);
-            bodyMap.put("cleaningSensitivity", 3);
-            bodyMap.put("foodScore", 2);
-            bodyMap.put("foodSensitivity", 2);
-            bodyMap.put("cigaretteScore", 3);
-            bodyMap.put("studyScore", 2);
-            bodyMap.put("studySensitivity", 1);
-            bodyMap.put("notebookScore", 3);
-            bodyMap.put("notebookSensitivity", 2);
-            bodyMap.put("alarmScore", 3);
-            bodyMap.put("alarmSensitivity", 2);
-            bodyMap.put("latestudyScore", 3);
-            bodyMap.put("latestudySensitivity", 1);
-            bodyMap.put("snoringScore", 3);
-            bodyMap.put("snoringSensitivity", 2);
-            bodyMap.put("friendlyScore", 3);
-            bodyMap.put("inhomeScore", 2);
-            bodyMap.put("inhomeSensitivity", 1);
-            bodyMap.put("coldOrHot", 1);
-            bodyMap.put("summerOrWinter", 1);
-        }
-        else{
-            bodyMap.put("userId", "2222");
-            bodyMap.put("bedtimeScore", 4);
-            bodyMap.put("wakeupScore", 3);
-            bodyMap.put("wakeupSensitivity", 1);
-            bodyMap.put("cleaningScore", 2);
-            bodyMap.put("cleaningSensitivity", 2);
-            bodyMap.put("foodScore", 1);
-            bodyMap.put("foodSensitivity", 1);
-            bodyMap.put("cigaretteScore", 1);
-            bodyMap.put("studyScore", 3);
-            bodyMap.put("studySensitivity", 3);
-            bodyMap.put("notebookScore", 3);
-            bodyMap.put("notebookSensitivity", 2);
-            bodyMap.put("alarmScore", 2);
-            bodyMap.put("alarmSensitivity", 1);
-            bodyMap.put("latestudyScore", 3);
-            bodyMap.put("latestudySensitivity", 3);
-            bodyMap.put("snoringScore", 3);
-            bodyMap.put("snoringSensitivity", 1);
-            bodyMap.put("friendlyScore", 1);
-            bodyMap.put("inhomeScore", 2);
-            bodyMap.put("inhomeSensitivity", 2);
-            bodyMap.put("coldOrHot", 0);
-            bodyMap.put("summerOrWinter", 3);
+            bodyMap.put("userId", userId);
+            bodyMap.put("bedtimeScore", userStyles[0]);
+            bodyMap.put("wakeupScore", userStyles[1]);
+            bodyMap.put("wakeupSensitivity", userStyles[2]);
+            bodyMap.put("cleaningScore", userStyles[3]);
+            bodyMap.put("cleaningSensitivity", userStyles[4]);
+            bodyMap.put("foodScore", userStyles[5]);
+            bodyMap.put("foodSensitivity", userStyles[6]);
+            bodyMap.put("cigaretteScore", userStyles[7]);
+            bodyMap.put("studyScore", userStyles[8]);
+            bodyMap.put("studySensitivity", userStyles[9]);
+            bodyMap.put("notebookScore", userStyles[10]);
+            bodyMap.put("notebookSensitivity", userStyles[11]);
+            bodyMap.put("alarmScore", userStyles[12]);
+            bodyMap.put("alarmSensitivity", userStyles[13]);
+            bodyMap.put("latestudyScore", userStyles[14]);
+            bodyMap.put("latestudySensitivity", userStyles[15]);
+            bodyMap.put("snoringScore", userStyles[16]);
+            bodyMap.put("snoringSensitivity", userStyles[17]);
+            bodyMap.put("friendlyScore", userStyles[18]);
+            bodyMap.put("inhomeScore", userStyles[19]);
+            bodyMap.put("inhomeSensitivity", userStyles[20]);
+            bodyMap.put("coldOrHot", userStyles[21]);
+            bodyMap.put("summerOrWinter", userStyles[22]);
 
-
-        }
 
         // webClient 기본 설정
         WebClient webClient =
@@ -101,16 +100,16 @@ public class WebClientServiceImpl {
 
     }
 
+    public UserStyle loadUserByUsername(String userId){
+        return userStyleRepository.findByUserId(userId)
+                .orElseThrow(() -> new IllegalArgumentException(userId));
+    }
+
+
     public Map<String, Object> postUpdate(String userId) {
         // Create a new request body for the new API endpoint
         Map<String, Object> newBodyMap = new HashMap<>();
-        if(userId == "1111") {
-
-            newBodyMap.put("userId", "1111");
-        }
-        else{
-            newBodyMap.put("userId", "2222");
-        }
+        newBodyMap.put("userId", userId);
 
         // Populate newBodyMap with the required parameters for the new endpoint
 

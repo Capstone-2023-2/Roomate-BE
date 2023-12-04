@@ -46,7 +46,7 @@ public class StarService {
 
     public List<UserCardDTO> showStarList(String userId) {
         Optional<List<UserStar>> userOptional = userStarRepository.findByUserId(userId);
-        UserCardDTO userCardDTO = new UserCardDTO();
+        UserCardDTO userCardDTO;
         List<UserCardDTO> userCardDTOs = new ArrayList<>();
 
         if (userOptional.isPresent()) {
@@ -60,8 +60,8 @@ public class StarService {
 
                 // userDetailOptional이 존재하는 경우에만 정보를 결과 목록에 추가합니다.
                 if (userDetailOptional.isPresent()) {
-                    UserDetail userDetail = userDetailOptional.get();
-                    userCardDTO = recommendService.makeUserCard(userId);
+                    //UserDetail userDetail = userDetailOptional.get();
+                    userCardDTO = recommendService.makeUserCard(starId);
                     userCardDTOs.add(userCardDTO);
                 }
             }
