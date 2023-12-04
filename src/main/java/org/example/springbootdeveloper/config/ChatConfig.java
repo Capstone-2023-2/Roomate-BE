@@ -12,7 +12,7 @@ public class ChatConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws") // stomp 설정
-                .setAllowedOrigins("*");
+                .setAllowedOrigins("http://ANIroomi-env.eba-rj7upyms.ap-northeast-2.elasticbeanstalk.com","http://localhost:3000");
     }
 
     @Override
