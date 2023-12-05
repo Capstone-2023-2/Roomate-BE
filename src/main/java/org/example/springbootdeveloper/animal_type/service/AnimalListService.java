@@ -24,11 +24,13 @@ public class AnimalListService {
     public AnimalListDTO makeAnimalListDTO(String userId) {
         String name;
         String features;
+        Boolean sensitive;
         List<String> wellMatchedRoommates = new ArrayList<>();
         List<String> incompatibleRoommates = new ArrayList<>();
 
         UserAnimal userAnimal = loadUserByUsername(userId);
         name = userAnimal.getAnimal();
+        sensitive = userAnimal.isSensitive();
 
         switch (name) {
             case "penguin":
@@ -77,6 +79,7 @@ public class AnimalListService {
         }
 
         AnimalListDTO animalListDTO = AnimalListDTO.builder()
+                .sensitive(sensitive)
                 .name(name)
                 .features(features)
                 .wellMatchedRoommates(wellMatchedRoommates)
