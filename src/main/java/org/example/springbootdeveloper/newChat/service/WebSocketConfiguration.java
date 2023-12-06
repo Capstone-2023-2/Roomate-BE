@@ -1,4 +1,4 @@
-package org.example.springbootdeveloper.chat.service;
+package org.example.springbootdeveloper.newChat.service;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
