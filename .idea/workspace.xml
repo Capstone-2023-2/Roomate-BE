@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/Chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/ChatList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/NewChat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/[apply_id]/Chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/chat.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/dto/ChatDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" afterDir="false" />
@@ -23,10 +27,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/secondexample/SecondExample.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/setProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/AnimalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/controller/AnimalPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/dto/AnimalListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/dto/AnimalListDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/service/AnimalListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/animal_type/service/AnimalListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/respository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/user/respository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/chat/service/WebSocketChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/service/WebSocketChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/chat/service/WebSocketConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/service/WebSocketConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +123,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.springbootdeveloper.email.dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/chat/[apply_id]" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringBootDeveloperApplication">
@@ -221,7 +228,7 @@
       <workItem from="1701690620964" duration="51000" />
       <workItem from="1701690797837" duration="681000" />
       <workItem from="1701692894834" duration="5542000" />
-      <workItem from="1701750310391" duration="1179000" />
+      <workItem from="1701750310391" duration="13646000" />
     </task>
     <servers />
   </component>
