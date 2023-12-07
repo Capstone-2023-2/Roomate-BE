@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 @ServerEndpoint("/socket/chatt/{apply_id}")
@@ -29,13 +31,24 @@ public class WebSocketChat {
     }
 
     @OnMessage
-    public void onMessage(String message, Session session, @PathParam("apply_id") String channel) throws IOException {
-        logger.info("receive message : {}", message);
+    public void onMessage(String jsonMessage, Session session, @PathParam("apply_id") String channel) throws IOException {
+        logger.info("receive message : {}", jsonMessage);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(jsonMessage);
+
+        String sender = jsonNode.get("name").asText();
+        String message = jsonNode.get("msg").asText();
+        String date = jsonNode.get("date").asText();
+
+        logger.info("Parsed message - Sender: {}, Message: {}, Date: {}", sender, message, date);
+
+        // 이제 필요한 작업을 수행하면 됩니다.
 
         Set<Session> channelSessions = channels.get(channel);
         if (channelSessions != null) {
             for (Session s : channelSessions) {
-                s.getBasicRemote().sendText(message);
+                s.getBasicRemote().sendText(jsonMessage);
             }
         }
     }
