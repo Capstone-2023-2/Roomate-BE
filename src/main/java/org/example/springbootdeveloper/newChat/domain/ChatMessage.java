@@ -23,7 +23,7 @@ public class ChatMessage {
     @Column(name = "message", nullable = false)
     private String message;
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "dates", nullable = false)
     private String date;
 
 
