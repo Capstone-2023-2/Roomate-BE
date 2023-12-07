@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3f4b2f5-1a43-49d9-b3bb-f5f9a6d39a78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/package-lock.json" afterDir="false" />
@@ -13,11 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/src/pages/login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/Roomate-FE/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/Controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/Controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/domain/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/domain/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/dto/ChatMessageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/dto/ChatMessageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/repository/ChatMessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/repository/ChatMessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/repository/ChatUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/springbootdeveloper/newChat/repository/ChatUserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +221,7 @@
       <workItem from="1701929993462" duration="7762000" />
       <workItem from="1701939652719" duration="35000" />
       <workItem from="1701953059902" duration="388000" />
-      <workItem from="1701953546991" duration="8180000" />
+      <workItem from="1701953546991" duration="10090000" />
     </task>
     <servers />
   </component>

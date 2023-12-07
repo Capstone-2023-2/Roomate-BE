@@ -90,6 +90,35 @@ public class ChatController {
         }
     }
 
+    @GetMapping("/chat/{chatRoomId}/another")
+    public ResponseEntity<String> chatAnother(@PathVariable Integer chatRoomId, Principal principal) {
+        String myUserId = principal.getName();
+        String otherUserName;
+
+        // 1. 해당 채팅 방의 모든 사용자 가져오기
+        Optional<List<ChatUser>> optionalChatUsers = chatUserRepository.findByChatRoomId(chatRoomId);
+
+        if (optionalChatUsers.isPresent()) {
+            List<ChatUser> chatUsers = optionalChatUsers.get();
+
+            // 2. 현재 사용자를 제외한 다른 사용자 찾기
+            Optional<ChatUser> otherUserOptional = chatUsers.stream()
+                    .filter(user -> !user.getChatUserId().equals(myUserId))
+                    .findFirst();
+
+            if (otherUserOptional.isPresent()) {
+                ChatUser otherUser = otherUserOptional.get();
+                otherUserName = otherUser.getChatUserId();
+
+
+                return ResponseEntity.ok(otherUserName);
+            }
+        }
+
+        // 처리할 수 있는 상황이 아닌 경우
+        return ResponseEntity.notFound().build();
+    }
+
 
 
 
