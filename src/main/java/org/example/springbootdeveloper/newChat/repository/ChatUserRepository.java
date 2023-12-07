@@ -13,6 +13,6 @@ import java.util.Optional;
 
 public interface ChatUserRepository extends JpaRepository<ChatUser, Long> {
 
-    Optional<List<ChatUser>> findByChatRoomId(Integer chatRoomId);
+    Optional<List<ChatUser>> findByChatRoomId(String chatRoomId);
 
 }

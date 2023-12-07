@@ -8,5 +8,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ChatMessageRepository extends JpaRepository<ChatMessage, Long> {
-    Optional<List<ChatMessage>> findByChatRoomId(Integer chatRoomId);
+    Optional<List<ChatMessage>> findByChatRoomId(String chatRoomId);
 }
