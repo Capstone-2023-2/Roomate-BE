@@ -18,7 +18,7 @@ public class ChatMessage {
     private Integer chatRoomId;
 
     @Column(name = "sender_id", nullable = false)
-    private String senderId;
+    private String sender;
 
     @Column(name = "message", nullable = false)
     private String message;
@@ -28,10 +28,10 @@ public class ChatMessage {
 
 
     @Builder
-    public ChatMessage(Integer chatRoomId, String senderId, String message, String date)
+    public ChatMessage(Integer chatRoomId, String sender, String message, String date)
     {
         this.message = message;
-        this.senderId = senderId;
+        this.sender = sender;
         this.date = date;
         this.chatRoomId = chatRoomId;
     }
