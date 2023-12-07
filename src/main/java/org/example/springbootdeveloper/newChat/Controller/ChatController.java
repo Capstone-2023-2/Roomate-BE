@@ -21,8 +21,17 @@ public class ChatController {
 
     @PostMapping("/chat/{otherNickname}")
     public ResponseEntity<String> newChat(@PathVariable String otherNickname, Principal principal) {
-        chatUserRepository.save(ChatUser.builder().chatUserId(otherNickname).build());
-        chatUserRepository.save(ChatUser.builder().chatUserId(principal.getName()).build());
+        String combinedString = otherNickname + principal.getName();
+        int chatRoomId = combinedString.hashCode();
+
+        chatUserRepository.save(ChatUser.builder()
+                .chatUserId(otherNickname)
+                .chatRoomId(chatRoomId)
+                .build());
+        chatUserRepository.save(ChatUser.builder()
+                .chatUserId(principal.getName())
+                .chatRoomId(chatRoomId)
+                .build());
         return ResponseEntity.ok("채팅 생성 성공");
     }
 
