@@ -8,13 +8,13 @@ import org.example.springbootdeveloper.newChat.repository.ChatMessageRepository;
 import org.example.springbootdeveloper.newChat.repository.ChatUserRepository;
 import org.example.springbootdeveloper.user.domain.User;
 import org.example.springbootdeveloper.user.respository.UserRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -59,13 +59,37 @@ public class ChatController {
                     .chatRoomId(Integer.parseInt(chatMessageDTO.getChatRoomId()))
                     .message(chatMessageDTO.getMessage())
                    .date(chatMessageDTO.getDate())
-                   .senderId(chatMessageDTO.getSenderNickname())
+                   .nickname(chatMessageDTO.getNickname())
                    .build());
     }
 
 
 
     //json 형식으로 저장된 메시지들 모두 주는 로직도 생성하자.
+    @GetMapping("/messages/{chatRoomId}")
+    public ResponseEntity<List<ChatMessageDTO>> getMessagesByChatRoomId(@PathVariable Integer chatRoomId) {
+        Optional<List<ChatMessage>> chatMessages = chatMessageRepository.findByChatRoomId(chatRoomId);
+
+        if (chatMessages.isPresent()) {
+            List<ChatMessageDTO> chatMessageDTOs = new ArrayList<>();
+
+            for (ChatMessage chatMessage : chatMessages.get()) {
+                // Convert ChatMessage entity to ChatMessageDTO if needed
+                ChatMessageDTO chatMessageDTO = new ChatMessageDTO();
+                chatMessageDTO.setChatRoomId(String.valueOf(chatMessage.getChatRoomId()));
+                chatMessageDTO.setMessage(chatMessage.getMessage());
+                chatMessageDTO.setDate(chatMessage.getDate());
+                chatMessageDTO.setNickname(chatMessage.getNickname());
+
+                chatMessageDTOs.add(chatMessageDTO);
+            }
+
+            return new ResponseEntity<>(chatMessageDTOs, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
 
 
 
