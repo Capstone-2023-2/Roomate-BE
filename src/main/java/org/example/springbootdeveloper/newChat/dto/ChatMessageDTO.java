@@ -9,19 +9,19 @@ import lombok.NoArgsConstructor;
 @Getter
 public class ChatMessageDTO {
 
-    private Integer chatRoomId;
+    private String chatRoomId;
 
-    private String senderId;
+    private String senderNickname;
 
     private String message;
 
     private String date;
 
     @Builder
-    public ChatMessageDTO(Integer chatRoomId, String senderId, String message, String date)
+    public ChatMessageDTO(String chatRoomId, String senderNickname, String message, String date)
     {
         this.chatRoomId = chatRoomId;
-        this.senderId = senderId;
+        this.senderNickname = senderNickname;
         this.message =message;
         this.date = date;
     }
