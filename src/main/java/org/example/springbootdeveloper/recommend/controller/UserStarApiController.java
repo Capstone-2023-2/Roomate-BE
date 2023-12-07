@@ -41,15 +41,25 @@ public class UserStarApiController {
 
     }
 
-    @DeleteMapping("/star/{starId}")
-    public ResponseEntity<String> deleteUserStar(@PathVariable String starId, Principal principal) {
-        boolean deleted = starService.delete(starId, principal.getName());
+    @DeleteMapping("/star/{nickname}")
+    public ResponseEntity<String> deleteUserStar(@PathVariable String nickname, Principal principal) {
+        Optional<User> userOptional = userRepository.findByNickname(nickname);
+        String starId;
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            starId = user.getUserId();
+            boolean deleted = starService.delete(starId, principal.getName());
 
-        if (deleted) {
-            return ResponseEntity.ok("User star deleted successfully");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User star not found");
+            if (deleted) {
+                return ResponseEntity.ok("User star deleted successfully");
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User star not found");
+            }
         }
+        else {
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @GetMapping("/list/star")
