@@ -6,8 +6,11 @@ import jakarta.websocket.OnOpen;
 import jakarta.websocket.Session;
 import jakarta.websocket.server.PathParam;
 import jakarta.websocket.server.ServerEndpoint;
+import org.example.springbootdeveloper.newChat.repository.ChatMessageRepository;
+import org.example.springbootdeveloper.user.respository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.*;
@@ -19,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class WebSocketChat {
     private static Map<String, Set<Session>> channels = new HashMap<>();
     private static Logger logger = LoggerFactory.getLogger(WebSocketChat.class);
+
 
     @OnOpen
     public void onOpen(Session session, @PathParam("apply_id") String channel) {

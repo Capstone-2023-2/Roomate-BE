@@ -13,9 +13,6 @@ import java.util.Optional;
 
 public interface ChatUserRepository extends JpaRepository<ChatUser, Long> {
 
-    Optional<List<ChatUser>> findByChatRoomId(Integer chatRoomId);
-
-    @Query("SELECT cu FROM ChatUser cu WHERE cu.chatRoomId = :chatRoomId AND cu.chatUserId <> :currentUserId")
-    Optional<ChatUser> findOtherUserInChatRoom(@Param("chatRoomId") Integer chatRoomId, @Param("currentUserId") String currentUserId);
+    Optional<List<ChatUser>> findByChatRoomId(String chatRoomId);
 
 }

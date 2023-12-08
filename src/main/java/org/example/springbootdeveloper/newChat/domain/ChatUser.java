@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name= "chat_users")
+@Table(name = "chat_users")
 public class ChatUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,19 +15,14 @@ public class ChatUser {
     private Long id;
 
     @Column(name = "chat_room_id", nullable = false)
-    private Integer chatRoomId;
+    private String chatRoomId;
 
     @Column(name = "chat_user_id", nullable = false)
     private String chatUserId;
 
-
-
-
     @Builder
-    public ChatUser(Integer chatRoomId, String chatUserId)
-    {
+    public ChatUser(String chatRoomId, String chatUserId) {
         this.chatRoomId = chatRoomId;
         this.chatUserId = chatUserId;
     }
-
 }
