@@ -22,7 +22,9 @@ select * from user_styles
 
 select * from users
 
-select * from user_details]]></console>
+select * from user_details
+
+select * from chat_users]]></console>
       <console name="Connection 1" type="STANDARD" schema="aniroomie" session="Main"><![CDATA[create database aniroomie;
 use aniroomie;
 
@@ -68,7 +70,11 @@ VALUES(1, 2, 2, 3, 3, 3, 1, 1, 3, 3, 3, 3, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 3, 3), 
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_stars" />
+      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="schemas/aniroomie/tables/user_styles" />
+      <object connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" object-ref="consoles/Connection" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="9f41eda2-d533-4a0c-8606-76b6486dec1a" dataset="aniroomie.user_animals" active-filter-id="" />

@@ -29,23 +29,20 @@ public class RecommendService {
         Map<String, UserCardDTO> userCardDTOMap = new HashMap<>();
 
         // 여러 사용자에 대한 정보를 가져오는 로직
-        for (int userId : getUserValues(id)) {
-            String userIdString = String.valueOf(userId);
-            UserCardDTO userCardDTO = makeUserCard(userIdString);
-            userCardDTOMap.put(userIdString, userCardDTO);
+        for (String userId : getUserValues(id)) {
+            UserCardDTO userCardDTO = makeUserCard(userId);
+            userCardDTOMap.put(userId, userCardDTO);
         }
 
         return userCardDTOMap;
     }
-
     public Map<String, UserCardDTO> getNewCards(String id) {
         Map<String, UserCardDTO> userCardDTOMap = new HashMap<>();
 
         // 여러 사용자에 대한 정보를 가져오는 로직
-        for (int userId : getUserNewValues(id)) {
-            String userIdString = String.valueOf(userId);
-            UserCardDTO userCardDTO = makeUserCard(userIdString);
-            userCardDTOMap.put(userIdString, userCardDTO);
+        for (String userId : getUserNewValues(id)) {
+            UserCardDTO userCardDTO = makeUserCard(userId);
+            userCardDTOMap.put(userId, userCardDTO);
         }
 
         return userCardDTOMap;
@@ -99,24 +96,24 @@ public class RecommendService {
         return userCardDTO;
     }
 
-    private int[] getUserValues(String Id) {
+    private String[] getUserValues(String Id) {
         Map<String, Object> response = webClientServiceImpl.post(Id);
 
         // Map의 값을 배열로 추출
-        int[] userValues = response.values().stream()
-                .mapToInt(value -> Integer.parseInt(value.toString()))
-                .toArray();
+        String[] userValues = response.values().stream()
+                .map(Object::toString)
+                .toArray(String[]::new);
 
         return userValues;
     }
 
-    private int[] getUserNewValues(String Id) {
+    private String[] getUserNewValues(String Id) {
         Map<String, Object> response = webClientServiceImpl.postUpdate(Id);
 
         // Map의 값을 배열로 추출
-        int[] userValues = response.values().stream()
-                .mapToInt(value -> Integer.parseInt(value.toString()))
-                .toArray();
+        String[] userValues = response.values().stream()
+                .map(Object::toString)
+                .toArray(String[]::new);
 
         return userValues;
     }
